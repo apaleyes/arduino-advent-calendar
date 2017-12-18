@@ -9,6 +9,7 @@ Components used in the circuit:
 4. 31 220 ohm resistors
 5. Real time clock module DS1338
 6. Lots of jumper wires
+7. 3 breadboards - one for shift registeres, two for leds
 
 Credits:
 * Circuit is pretty much taken from here: https://www.arduino.cc/en/Tutorial/ShiftOut, and then extended to 31 led.
