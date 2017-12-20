@@ -27,13 +27,13 @@ struct datetime {
 };
 
 void setup() {
-    //Initialize array
+    // Initialize array
     registerState = new byte[numOfRegisters];
     for (size_t i = 0; i < numOfRegisters; i++) {
         registerState[i] = 0;
     }
 
-    //set pins to output so you can control the shift register
+    // Set pins to output so you can control the shift register
     pinMode(latchPin, OUTPUT);
     pinMode(clockPin, OUTPUT);
     pinMode(dataPin, OUTPUT);
@@ -51,7 +51,7 @@ void loop() {
 }
 
 void oneByOne(int stopPin, int timeout) {
-    // Light up leds one by one until and including the stop pin
+    // Light up leds one by one until the stop pin
     // Long delay after the last pin
     for (int i = 0; i < stopPin; i++){
         regWrite(i, HIGH);
@@ -70,9 +70,9 @@ void clearAll() {
 }
 
 void regWrite(int pin, bool state){
-    //Determines register
+    // Determines register
     int reg = (pin / 8);
-    //Determines pin for actual register
+    // Determines pin for actual register
     int actualPin = pin - (8 * reg);
 
     //Begin session
@@ -104,7 +104,7 @@ byte bcdToDec(byte val) {
 
 
 datetime readDate() {
-    // Read the Date and Time from RTC and set the char array passed in
+    // Read the date and time from RTC and return the datetime structure
 
     // Reset the register pointer
     Wire.beginTransmission(RTC_ADDRESS);
