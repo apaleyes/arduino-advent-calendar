@@ -119,8 +119,8 @@ datetime readDate() {
 
     currentDateTime.second = bcdToDec(Wire.read());
     currentDateTime.minute = bcdToDec(Wire.read());
-    currentDateTime.hour = bcdToDec(Wire.read() & 0b111111); //24 hour time
-    currentDateTime.weekDay = bcdToDec(Wire.read()); //0-6 -> sunday - Saturday
+    currentDateTime.hour = bcdToDec(Wire.read() & 0b111111); // 24 hour time
+    currentDateTime.weekDay = bcdToDec(Wire.read()); // 0-6 -> Sunday - Saturday
     currentDateTime.monthDay = bcdToDec(Wire.read());
     currentDateTime.month = bcdToDec(Wire.read());
     currentDateTime.year = bcdToDec(Wire.read());
