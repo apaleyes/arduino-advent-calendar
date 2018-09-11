@@ -1,6 +1,6 @@
 # Simple advent calendar on Arduino
 
-Idea of the calendar is: somehow find out the current day of month, assuming it is already December, and then light up as many leds  as there are days into the month. Note that this implementation counts down to New Year, so it uses 31 led.
+Idea of the calendar is: find out the current day of month, assuming it is December, and then light up as many leds as there are days into the month. Note that this implementation counts down to New Year, so it uses 31 led.
 
 Components used in the circuit:
 1. Arduino Uno
@@ -9,7 +9,7 @@ Components used in the circuit:
 4. 31 220 ohm resistors
 5. Real time clock module DS1338
 6. Lots of jumper wires
-7. 3 breadboards - one for shift registeres, two for leds
+7. 3 breadboards - one for shift registers, two for leds
 
 Credits:
 * Circuit is pretty much taken from here: https://www.arduino.cc/en/Tutorial/ShiftOut, and then extended to 31 led.
